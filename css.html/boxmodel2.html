@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <style>
+        body {
+            margin: 0px;
+            box-sizing:border-box;
+            padding: 0;
+        }
+         html, *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #main{
+             width: 800px;
+            height: 600px;
+            background-color: rgb(255, 127, 127);
+            border: 5px;
+            margin: 0 auto;
+            display: flex;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: bisque;
+            margin-right: 25px; 
+        
+        }
+         .box:nth-child(1){
+            width: 400px;
+            height: 600px;
+            align-self: auto;
+            background-color: rgb(255, 251, 0);
+            margin-right: 25px;
+        }
+            .box:nth-child(2){
+            width: 300px;
+            align-self: flex-start;
+            height: 200px;
+            background-color: rgb(51, 0, 255);
+        }
+         .box:nth-child(3){
+            width: 600px;
+            align-self: flex-end;
+            height: 200px;
+            background-color: rgb(51, 0, 255);
+        }
+    </style>
+    <div id="main">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+</body>
+</html>
