@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        html,*{
+            margin: 0;
+            padding:0%;
+            box-sizing: border-box;
+        }
+        main{
+            width:120px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: aqua;
+        }
+        #hdr_top,#container,#footer{
+            width: 100%;
+            height: 100px;
+            background-color: azure;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #container{
+            flex-grow: 1;
+            height:480px;
+            background-color: bisque;
+            align-items: center;
+        }
+        #left,#right{
+            flex-grow: 1;
+            background-color: aquamarine;
+            display: flex;
+            flex-direction: row;
+            line-height: 150px;
+            text-align: center;
+            align-items: center;
+        }
+        #center{
+             flex-grow: 1;
+            background-color: rgb(242, 127, 255);
+            display: flex;
+            flex-direction: row;
+            line-height: 150px;
+            text-align: center;
+            align-items: center;
+        }
+        #hdr_top{
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            text-align: center;
+            align-items: center;
+            line-height: 150px;
+
+        }
+        #hdr_top_left{
+            flex-grow: 1;
+            background-color: aquamarine;
+        }
+        #hdr_top_right{
+            flex-grow: 2;
+            background-color: aquamarine;
+            align-self: right;
+        }
+    </style>
+</head>
+<body>
+        <div id="hdr_top">
+            <div id="hdr_top_left">Header logo</div>
+            <div id="hdr_top_right">Header right</div>
+        </div>
+        <div id="container">
+            <div id="left">container1</div>
+            <div id="center">container center</div>
+            <div id="right">container right</div>
+        </div>
+        <div id="footer">Footer</div>
+
+    
+</body>
+</html>
