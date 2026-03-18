@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in JS</title>
+</head>
+<body>
+
+<script>
+// Normal function
+function demo(){
+    console.log("Hello 25");
+}
+
+function demo1(){
+    console.log("text");
+}
+
+// Function with parameters
+function cal1(a, b){
+    console.log("Addition of two numbers is " + (a + b));
+}
+
+demo();
+demo1();
+cal1(10, 20);
+
+// Arrow function (anonymous)
+let add = (a, b) => {
+    console.log("First number is " + a);
+    console.log("Second number is " + b);
+    console.log("Addition is " + (a + b));
+};
+add(5, 6);
+
+// Callback function
+function mul(callback){
+    let num1 = 10;
+    let num2 = 20;
+    let res = num1 * num2;
+    callback(res);
+}
+
+function result(res){
+    console.log("Multiply is " + res);
+}
+
+mul(result);
+
+// setTimeout example
+function msg(){
+    document.write("Hello<br>");
+}
+
+function loading(){
+    document.write("Loading...<br>");
+}
+
+loading();
+setTimeout(msg, 2000);
+
+// Map, Reduce
+let num = [1,2,4,5];
+
+let finalResult = num.map(n => n * 2);
+console.log(finalResult);
+
+let finalResult2 = num.reduce((total, n) => total + n, 0);
+console.log(finalResult2);
+
+// Promise
+let promise = new Promise(function(resolve, reject){
+    let success = true;
+
+    if(success){
+        resolve("Promise resolved");
+    } else {
+        reject("Promise rejected");
+    }
+});
+
+promise
+.then(res => console.log(res))
+.catch(err => console.log(err));
+
+// Async / Await
+async function userData(){
+    try{
+        let data = await fetch('https://dummyjson.com/products');
+        let updatedData = await data.json();
+        console.log(updatedData);
+    }
+    catch(error){
+        console.log("Not fetched " + error);
+    }
+}
+
+userData();
+
+</script>
+
+</body>
+</html>
