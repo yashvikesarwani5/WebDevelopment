@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation (Beginner)</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+        }
+    </style>
+</head>
+<body>
+
+<h1 id="heading">Welcome</h1>
+
+<!-- Input -->
+<input type="text" id="message" placeholder="Enter message">
+
+<br><br>
+
+<!-- Buttons -->
+<button onclick="changeText()">Change Heading</button>
+<button onclick="changeColor()">Change Background</button>
+<button onclick="changeSize()">Change Font Size</button>
+<button onclick="togglePara()">Show/Hide Paragraph</button>
+<button onclick="resetPage()">Reset</button>
+
+<!-- Paragraph -->
+<p id="para">This is a sample paragraph.</p>
+
+<script>
+    // Change heading text
+    function changeText() {
+        let msg = document.getElementById("message").value;
+        document.getElementById("heading").innerHTML = msg;
+    }
+
+    // Change background color (onmouseover also used)
+    function changeColor() {
+        document.body.style.backgroundColor = "lightblue";
+    }
+
+    // Change font size
+    function changeSize() {
+        document.getElementById("heading").style.fontSize = "40px";
+    }
+
+    // Show/Hide paragraph
+    function togglePara() {
+        let p = document.getElementById("para");
+
+        if (p.style.display === "none") {
+            p.style.display = "block";
+        } else {
+            p.style.display = "none";
+        }
+    }
+
+    // Reset page
+    function resetPage() {
+        location.reload();
+    }
+
+    // Example of addEventListener
+    document.getElementById("heading").addEventListener("mouseover", function() {
+        this.style.color = "red";
+    });
+
+    // Example of onchange
+    document.getElementById("message").onchange = function() {
+        alert("Input changed!");
+    };
+</script>
+
+</body>
+</html>
